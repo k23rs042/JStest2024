@@ -10,12 +10,31 @@
     <link rel="stylesheet" href="css/style.css">
     <script>
         $(function() {
+            var a = [10,50,30]
+            a.push(40);
+            a.unshift(0);
+            var msg="";
+            for(let i=0;i<a.length;i++){
+                msg += i + ":"+
+                a[i]+"<br>";
+            }
+            $("#disp2").html(msg);
+            var msg ="";
+            var p=a.pop();
+            var s = a.shift();
+            for(let i=0;i<a.length;i++){
+                msg += i +":"+a[i] +"<br>";
+                $("#disp1").html(msg);
+            }
             $("#btn").click(function(e) {
+            
+
                 main();
             });
         });
 
         function main() {
+          
 
             $("#disp1").html("Hello, JavaScript!<br>This is Monaca");
            $("#disp1").css("font-size", "x-large");
